@@ -88,6 +88,7 @@ print("COCO Model Caption:", caption_coco)
 - The script demonstrates how to initialize and use the image-captioning functionality provided by the "modern-caption" library.
 - Users can experiment with different models and decoding methods to obtain varied captions.
 - Ensure that the image paths are correct and accessible.
+- This library used the following [repository](https://github.com/rmokady/CLIP_prefix_caption) for conceptual reference.
 
 ---
 
