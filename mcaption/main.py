@@ -48,7 +48,7 @@ class Caption:
 
     def _set_inherit(self):
         """
-        This will conditionally inherit the non-model-specific objects from another instance of mcaptions.Caption
+        This will conditionally inherit the non-model-specific objects from another instance of mcaption.Caption
         or, alternatively, init them locally.
 
         This is to save resources in the event we are using multiple models / instances.

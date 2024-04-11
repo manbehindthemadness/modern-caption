@@ -13,7 +13,7 @@ from transformers import (
 )
 
 
-base_path = Path('~/.cache/mcaptions').expanduser()
+base_path = Path('~/.cache/mcaption').expanduser()
 
 models = {
     'conceptual': {
