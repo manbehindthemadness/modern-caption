@@ -24,7 +24,7 @@ This Python script provides functionality for generating image captions using th
    - Setup will **not** overwrite existing installs of PyTorch or Torchvision.
    - Install using pip:
      ```bash
-     pip indstall modern-caption
+     pip install modern-caption
      ```
 
 ---
