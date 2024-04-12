@@ -92,4 +92,6 @@ print("COCO Model Caption:", caption_coco)
 
 ---
 
-This README provides instructions for using the image-captioning functionality and examples of its usage with different models. For more details and advanced customization options, refer to the library documentation and source code.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
