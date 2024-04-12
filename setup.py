@@ -1,10 +1,7 @@
 from setuptools import setup, find_packages
-try:
-    from install_preserve import preserve
-except ImportError:
-    import pip  # noqa
-    pip.main(['install', 'install-preserve'])
-    from install_preserve import preserve  # noqa
+import subprocess
+subprocess.run(['pip', 'install', 'install-preserve', '-U'], check=True)
+from install_preserve import preserve  # noqa
 
 install_requires = [
     'scikit-image>=0.18.1',
@@ -14,12 +11,13 @@ install_requires = [
     'tqdm',
     'torch>=2.0.0',
     'torchvision>=0.17.0',
-    'git+https://github.com/openai/CLIP.git'
+    'CLIP @ git+https://github.com/openai/CLIP.git'
 ]
 
 excludes = [
     'torch',
-    'torchvision'
+    'torchvision',
+    'CLIP:clip',
 ]
 
 install_requires = preserve(install_requires, excludes, verbose=True)
@@ -31,7 +29,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='mcaption',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(),
     install_requires=install_requires,
     entry_points={
