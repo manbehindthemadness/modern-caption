@@ -1,7 +1,7 @@
 """
 Main application code.
 """
-import clip
+from mcaption.clip import clip
 import torch
 import numpy as np
 from transformers import (

@@ -11,13 +11,11 @@ install_requires = [
     'tqdm',
     'torch>=2.0.0',
     'torchvision>=0.17.0',
-    'CLIP @ git+https://github.com/openai/CLIP.git'
 ]
 
 excludes = [
     'torch',
     'torchvision',
-    'CLIP:clip',
 ]
 
 install_requires = preserve(install_requires, excludes, verbose=True)
@@ -29,7 +27,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='mcaption',
-    version='0.0.2',
+    version='0.0.3',
     packages=find_packages(),
     install_requires=install_requires,
     entry_points={
