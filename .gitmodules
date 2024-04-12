@@ -1,0 +1,3 @@
+[submodule "mcaption/clip"]
+	path = mcaption/clip
+	url = https://github.com/openai/CLIP
