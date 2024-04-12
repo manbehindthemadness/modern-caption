@@ -27,7 +27,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='mcaption',
-    version='0.0.3',
+    version='0.0.4',
     packages=find_packages(),
     install_requires=install_requires,
     entry_points={
