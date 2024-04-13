@@ -11,6 +11,7 @@ install_requires = [
     'tqdm',
     'torch>=2.0.0',
     'torchvision>=0.17.0',
+    'quickdl',
 ]
 
 excludes = [

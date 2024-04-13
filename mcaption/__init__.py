@@ -1,9 +1,9 @@
 """
 You guessed it...
 """
+from quickdl import dl
 try:
     from utils import (
-        download_if_not_exist,
         models,
         base_path,
     )
@@ -12,7 +12,6 @@ try:
     )
 except ImportError:
     from .utils import (
-        download_if_not_exist,
         models,
         base_path,
     )
@@ -23,4 +22,4 @@ except ImportError:
 
 for model_key in models.keys():
     model_record = models[model_key]
-    download_if_not_exist(base_path, model_record['url'])
+    dl(base_path, model_record['url'])

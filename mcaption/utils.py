@@ -1,7 +1,6 @@
 """
 Utility code.
 """
-import urllib.request
 from pathlib import Path
 from torch import nn
 import torch
@@ -25,25 +24,6 @@ models = {
         'url': 'https://huggingface.co/Manbehindthemadness/conceptual_coco/resolve/main/coco_weights.pth'
     }
 }
-
-
-def download_if_not_exist(path: Path, url: str):
-    """
-    Checks if a file specified by path exists. If not, downloads it from the given URL.
-
-    Args:
-        path (Path): The path to the file.
-        url (str): The URL from which to download the file.
-    """
-    path.mkdir(parents=True, exist_ok=True)
-    file_name = url.split('/')[-1]
-    file_path = path / file_name
-    if not file_path.exists():
-        print(f"Downloading {path.name} from {url}...")
-        urllib.request.urlretrieve(url, file_path)
-        print("Download complete!")
-    else:
-        print(f"Confirmed {file_path} exists")
 
 
 class MLP(nn.Module):
