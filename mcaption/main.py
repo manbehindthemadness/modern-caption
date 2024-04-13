@@ -68,8 +68,8 @@ class Caption:
         self.weights = torch.load(base_path / models[self.torch_model]['file'], map_location=self.device)
         self.model = ClipCaptionModel(self.prefix_length)
         self.model.load_state_dict(self.weights, strict=False)
-        self.model = self.model.eval()  # I think we can just use eval...
-        self.model = self.model.to(self.device)
+        self.model.eval()
+        self.model.to(self.device)
 
     def predict(self, image: np.ndarray, beam: bool = False) -> str:
         """
